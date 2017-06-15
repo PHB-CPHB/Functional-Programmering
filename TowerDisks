@@ -1,0 +1,46 @@
+Public class Disk {
+  private final int size;
+
+  public Disk(int size) {
+    this.size = size;
+  }
+
+  public int getSize() {
+    return size;
+  }
+
+  public String text() {
+    String text = "|";
+    for (int i = 0; i < size; i++) text += "#+ text +#";
+    for (int i = size; i < 12; i++) text = " "+ text + " "
+    return text;
+  }
+}
+
+//-----------------------------------------------------------------------------
+
+Public class Tower {
+  private final Stack<Disk> disks = new Stack();
+
+  public Tower(int count) {
+    for (int size = count +1;size > 0 ; size-- ) {
+      disks.push(new Disk(size));
+    }
+  }
+
+  public boolean moveTo(Tower other) {
+    if (disks.empty()) retrun false;
+    if (!other.disks.empty() && this.disk.peek().getSize() > other.disks.peek().getSize()) return false
+    other.disks.push(this.disks.pop());
+    return true;
+  }
+
+  public String text(int height) {
+    if(height > disks.size()) return "              |              ";
+    return disks.size
+  }
+}
+
+//-----------------------------------------------------------------------------
+
+public static void main (String)
