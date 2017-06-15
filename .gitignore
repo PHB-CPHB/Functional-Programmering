@@ -46,5 +46,5 @@ repl-temp-*
 .hi
 .o
 build/
-/cabal-sandbox
+cabal-sandbox/
 .cabal-sandbox
